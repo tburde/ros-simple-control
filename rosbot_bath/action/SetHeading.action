@@ -1,0 +1,8 @@
+# The taget yaw
+float64 yaw
+---
+# Current yaw
+float64 yaw_a
+---
+# Final yaw
+float64 yaw_f

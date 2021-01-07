@@ -1,0 +1,6 @@
+float32[] scan
+---
+float32[] scan_l
+float32[] scan_r
+float32[] scan_fl
+float32[] scan_fr

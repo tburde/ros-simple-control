@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="calculate_heading_node" pkg="rosbot_bath" type="calculate_heading_node.py"  />
+  <node name="run_stats_node" pkg="rosbot_bath" type="run_stats_node.py" output="screen"/> 
+  <node name="sensor_fusion_node" pkg="rosbot_bath" type="sensor_fusion_node.py"/>
+  <node name="set_heading_as" pkg="rosbot_bath" type="set_heading_as.py"/>
+  <node name="simple_avoid_node" pkg="rosbot_bath" type="simple_avoid_node.py" />
+  <node name="ScanSegment_server" pkg="rosbot_bath" type="ScanSegment_server"/>
+  <node name="planner_node" pkg="rosbot_bath" type="planner_node" /> <!-- output="screen"/> -->
+ <node name="accelerator_node" pkg="rosbot_bath" type="accelerator_node"/>
+
+
+
+</launch>

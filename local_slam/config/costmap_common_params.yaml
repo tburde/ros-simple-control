@@ -1,0 +1,31 @@
+#obstacle_range: 6.0
+#raytrace_range: 8.5
+#footprint: [[0.12, 0.14], [0.12, -0.14], [-0.12, -0.14], [-0.12, 0.14]]
+##robot_radius: ir_of_robot
+#inflation_radius: 0.55
+
+#map_topic: /map
+
+#observation_sources: laser_scan_sensor
+
+#laser_scan_sensor: {sensor_frame: frame_name, data_type: LaserScan, topic: topic_name, marking: true, clearing: true}
+#laser_scan_sensor: {sensor_frame: laser_frame, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+obstacle_range: 7.0
+raytrace_range: 9.5
+footprint: [[0.12, 0.14], [0.12, -0.14], [-0.12, -0.14], [-0.12, 0.14]]
+#inflation_radius: 0.2
+map_topic: /map
+subscribe_to_updates: true
+
+observation_sources: laser_scan_sensor 
+laser_scan_sensor: {sensor_frame: laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, expected_update_rate: 20, min_obstacle_height: 0.1 , max_obstacle_height: 0.25}
+
+obstacle_layer: 
+ observation_sources: laser_scan_sensor 
+ laser_scan_sensor: {sensor_frame: laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true, expected_update_rate: 20, min_obstacle_height: 0.1 , max_obstacle_height: 0.25}
+
+
+global_frame: map
+robot_base_frame: base_link
+always_send_full_costmap: true
